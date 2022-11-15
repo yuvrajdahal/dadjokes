@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+/* font-family: 'VT323', monospace; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer components {
+  .btn-outline {
+    @apply border border-c-gray text-c-gray rounded-full px-2 py-1.5 cursor-pointer active:text-white active:border-white;
+  }
+  .text-normal {
+    @apply text-c-gray;
+  }
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

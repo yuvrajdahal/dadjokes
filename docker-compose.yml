@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  app:
+    container_name: dad-jokes
+    image: dad-jokes
+    # restart: always
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/usr/src/xavier-frontend/src
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+  prod:
+    container_name: dad-jokes
+    image: dad-jokes
+    restart: always
+    build:
+      context: .
+    ports:
+      - "3000:3000"
