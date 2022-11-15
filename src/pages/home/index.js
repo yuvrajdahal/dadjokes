@@ -31,9 +31,17 @@ const App = () => {
     <div className="h-full w-full flex">
       <LeftImage />
       <div className="w-full md:w-[60%] flex flex-col justify-center items-center ">
-        <div className="h-1/2  w-full lg:w-3/4 flex flex-col justify-center items-center space-x-4 px-2">
+        <div
+          className={`${
+            !isSuccess && "h-1/2"
+          }  w-full lg:w-3/4 flex flex-col justify-center items-center space-x-4 px-4`}
+        >
           <div className="w-full h-full ">
-            <div className="h-full w-full	border border-c-gray rounded-md flex justify-center items-center">
+            <div
+              className={`h-full w-full	border border-c-gray rounded-md flex flex-col justify-center items-center ${
+                isSuccess && "py-10"
+              }`}
+            >
               <span className="inline-flex gap-2 text-c-gray font-vt323 px-4 ">
                 {isSuccess && (
                   <>

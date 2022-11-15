@@ -8,7 +8,7 @@ export const extendedSlice = apiSlice.injectEndpoints({
       providedTags: ["Jokes"],
       providesTags: (result, error, arg) =>
         result
-          ? [...result.map(({ id }) => ({ type: "Post", id })), "Post"]
+          ? [...result.body.map(({ id }) => ({ type: "Post", id })), "Post"]
           : ["Post"],
     }),
   }),
