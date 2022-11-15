@@ -30,10 +30,10 @@ const App = () => {
   return (
     <div className="h-full w-full flex">
       <LeftImage />
-      <div className="w-full md:w-[60%] flex flex-col justify-center items-center ">
+      <div className="h-full w-full md:w-[60%] flex flex-col justify-center items-center py-2  overflow-y-scroll">
         <div
           className={`${
-            !isSuccess && "h-1/2"
+            isLoading ? "h-1/2" : "mt-4"
           }  w-full lg:w-3/4 flex flex-col justify-center items-center space-x-4 px-4`}
         >
           <div className="w-full h-full ">
